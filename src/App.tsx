@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Advisor from './pages/Advisor';
+import SkillGapAnalysis from './pages/skill-gap';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/advisor" element={<Advisor />} />
+        <Route path="/skill-gap" element={<SkillGapAnalysis />} />
       </Routes>
     </Router>
   );

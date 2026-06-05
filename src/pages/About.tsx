@@ -1,5 +1,4 @@
-
-import { BookOpen, Brain, GraduationCap } from 'lucide-react';
+import { BookOpen, Brain, GraduationCap, Search } from 'lucide-react';
 
 export default function About() {
   return (
@@ -37,6 +36,11 @@ export default function About() {
               icon: <GraduationCap className="w-12 h-12" />,
               title: "Expert Guidance",
               description: "Get personalized advice through our AI chatbot to help you navigate your educational journey."
+            },
+            {
+              icon: <Search className="w-12 h-12" />,
+              title: "Skill Gap Analysis",
+              description: "Identify the skills required for your desired career path and receive tailored recommendations to bridge the gap."
             }
           ].map((feature, index) => (
             <div
@@ -76,6 +80,11 @@ export default function About() {
               },
               {
                 step: "4",
+                title: "Skill Gap Analysis",
+                description: "Compare your current skills with industry requirements and get suggestions for courses and training."
+              },
+              {
+                step: "5",
                 title: "Expert Support",
                 description: "Chat with our AI advisor for detailed guidance and answers to your questions."
               }

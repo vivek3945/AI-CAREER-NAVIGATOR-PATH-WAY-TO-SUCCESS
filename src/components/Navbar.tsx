@@ -14,7 +14,7 @@ export default function Navbar() {
           </Link>
           
           <div className="flex space-x-8 font-bold text-lg">
-            {[{ path: '/', label: 'Home' }, { path: '/advisor', label: 'Advisor' }, { path: '/about', label: 'About' }].map((link) => (
+            {[{ path: '/', label: 'Home' }, { path: '/advisor', label: 'Advisor' }, { path: '/skill-gap', label: 'Skill Gap' },{ path: '/about', label: 'About' } ].map((link) => (
               <Link
                 key={link.path}
                 to={link.path}

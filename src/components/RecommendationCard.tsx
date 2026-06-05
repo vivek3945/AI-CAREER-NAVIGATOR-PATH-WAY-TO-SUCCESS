@@ -90,38 +90,42 @@ export default function RecommendationCard({
             </span>
           </div>
 
-          <div>
-            <h4 className="text-sm font-semibold text-gray-700 mb-2">
-              Requirements:
-            </h4>
-            <ul className="list-disc list-inside space-y-1">
-              {currentRecommendation.requirements.map((req, index) => (
-                <li key={index} className="text-sm text-gray-600">
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-gray-700 mb-2">
-              Potential Careers:
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {currentRecommendation.careers.map((career, index) => (
-                <span
-                  key={index}
-                  className={`px-3 py-1 text-sm rounded-full ${
-                    showAI 
-                      ? 'bg-purple-50 text-purple-700' 
-                      : 'bg-blue-50 text-blue-700'
-                  }`}
-                >
-                  {career}
-                </span>
-              ))}
+          {currentRecommendation.requirements && currentRecommendation.requirements.length > 0 && (
+            <div>
+              <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                Requirements:
+              </h4>
+              <ul className="list-disc list-inside space-y-1">
+                {currentRecommendation.requirements.map((req, index) => (
+                  <li key={index} className="text-sm text-gray-600">
+                    {req}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          )}
+
+          {currentRecommendation.careers && currentRecommendation.careers.length > 0 && (
+            <div>
+              <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                Potential Careers:
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {currentRecommendation.careers.map((career, index) => (
+                  <span
+                    key={index}
+                    className={`px-3 py-1 text-sm rounded-full ${
+                      showAI 
+                        ? 'bg-purple-50 text-purple-700' 
+                        : 'bg-blue-50 text-blue-700'
+                    }`}
+                  >
+                    {career}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
